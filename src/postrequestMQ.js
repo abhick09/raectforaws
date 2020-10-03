@@ -10,7 +10,7 @@ const retryDelay = (retryNumber = 0) => {
 };
 
 const api = axios.create({
-  baseURL: `https://q7ok1ojaqg.execute-api.us-east-1.amazonaws.com/v1/sendqueue`,
+  baseURL: `https://r9vxi94ufe.execute-api.us-east-1.amazonaws.com/v1/sendMessageLambda`,
 });
 
 axiosRetry(api, {
