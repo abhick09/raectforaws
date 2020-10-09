@@ -10,7 +10,7 @@ const retryDelay = (retryNumber = 0) => {
 };
 
 const api = axios.create({
-  baseURL: `https://q7ok1ojaqg.execute-api.us-east-1.amazonaws.com/v1/sendqueue`,
+  baseURL: `https://us-central1-cdap-2.cloudfunctions.net/sendmsqabk`,
 });
 
 axiosRetry(api, {
@@ -21,7 +21,7 @@ axiosRetry(api, {
 export default class createContent extends Component {
   createPayload = async () => {
     let res = await api.post('/', {
-      name: 'TechKraft.',
+      key: 'TechKraft.',
     });
     console.log(res);
   };
